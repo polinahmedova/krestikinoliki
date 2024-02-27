@@ -58,7 +58,7 @@ class RoomsView extends GetView<RoomsController> {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        Get.toNamed(Routes.CREATEROOM, arguments: nickname);
+                        Get.toNamed(Routes.PLAYPAGE, arguments: nickname);
                         // Navigate to create room page
                       },
                       child: Text('Создать комнату'),

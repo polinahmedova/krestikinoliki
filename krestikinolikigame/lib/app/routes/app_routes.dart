@@ -8,6 +8,7 @@ abstract class Routes {
 
   static const AVAILABLEROOMS = _Paths.AVAILABLEROOMS;
   static const CREATEROOM = _Paths.CREATEROOM;
+  static const PLAYPAGE = _Paths.PLAYPAGE;
 }
 
 abstract class _Paths {
@@ -16,4 +17,5 @@ abstract class _Paths {
   static const ROOMS = '/rooms';
   static const AVAILABLEROOMS = '/availablerooms';
   static const CREATEROOM = '/createroom';
+  static const PLAYPAGE = '/playpage';
 }
