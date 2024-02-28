@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:krestikinolikigame/app/data/services/network_service.dart';
+import 'package:krestikinolikigame/app/data/services/storage_service.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() {
+void main() async {
+  await initServices();
   runApp(
     GetMaterialApp(
       title: "Application",
@@ -12,4 +16,10 @@ void main() {
       getPages: AppPages.routes,
     ),
   );
+}
+
+Future<void> initServices() async {
+  //await GetStorage.init('main');
+  await Get.putAsync(() => StorageService().init());
+  await Get.putAsync(() => NetworkService().init());
 }
